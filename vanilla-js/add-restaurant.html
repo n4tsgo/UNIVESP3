@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Restaurant</title>
+</head>
+<body>
+    <h1>Add a New Restaurant</h1>
+    <form id="restaurant-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="price">Price Level:</label>
+        <select id="price" name="price">
+            <option value="$">$</option>
+            <option value="$$">$$</option>
+            <option value="$$$">$$$</option>
+        </select><br><br>
+
+        <button type="submit">Add Restaurant</button>
+    </form>
+</body>
+</html>
