@@ -64,7 +64,7 @@ FriendlyEats.prototype.addMockRatings = function(restaurantID) {
     var rating = this.data.ratings[
       parseInt(this.data.ratings.length*Math.random())
     ];
-    rating.userName = 'Bot (Web)';
+    rating.userName = 'Simulação';
     rating.timestamp = new Date();
     rating.userId = firebase.auth().currentUser.uid;
     ratingPromises.push(this.addRating(restaurantID, rating));

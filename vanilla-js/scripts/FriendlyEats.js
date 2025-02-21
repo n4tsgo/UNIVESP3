@@ -36,7 +36,7 @@ function FriendlyEats() {
     city: '',
     price: '',
     category: '',
-    sort: 'Rating'
+    sort: 'Nota Maior para Menor'
   };
 
   this.dialogs = {};
@@ -79,11 +79,6 @@ FriendlyEats.prototype.initRouter = function() {
         that.viewRestaurant(id);
       }
     })
-    .on({
-      '/add-restaurant': function() {
-        that.viewAddRestaurant(); // Método que você criaria para exibir o formulário
-      }
-    })
     .resolve();
 
   firebase
@@ -116,107 +111,56 @@ FriendlyEats.prototype.getRandomItem = function(arr) {
 FriendlyEats.prototype.data = {
   words: [
     'Bar',
-    'Fire',
+    'Fogo',
     'Grill',
     'Drive Thru',
     'Place',
-    'Best',
-    'Spot',
+    'Melhor',
+    'Local',
     'Prime',
     'Eatin\''
   ],
   cities: [
-    'Albuquerque',
-    'Arlington',
-    'Atlanta',
-    'Austin',
-    'Baltimore',
-    'Boston',
-    'Charlotte',
-    'Chicago',
-    'Cleveland',
-    'Colorado Springs',
-    'Columbus',
-    'Dallas',
-    'Denver',
-    'Detroit',
-    'El Paso',
-    'Fort Worth',
-    'Fresno',
-    'Houston',
-    'Indianapolis',
-    'Jacksonville',
-    'Kansas City',
-    'Las Vegas',
-    'Long Island',
-    'Los Angeles',
-    'Louisville',
-    'Memphis',
-    'Mesa',
-    'Miami',
-    'Milwaukee',
-    'Nashville',
-    'New York',
-    'Oakland',
-    'Oklahoma',
-    'Omaha',
-    'Philadelphia',
-    'Phoenix',
-    'Portland',
-    'Raleigh',
-    'Sacramento',
-    'San Antonio',
-    'San Diego',
-    'San Francisco',
-    'San Jose',
-    'Tucson',
-    'Tulsa',
-    'Virginia Beach',
-    'Washington'
+    'Limeira',
+    'Campinas',
+    'Americana',
+    'Rio Claro',
+    'Indaiatuba',
+    'Piracicaba'
   ],
   categories: [
-    'Brunch',
-    'Burgers',
-    'Coffee',
-    'Deli',
-    'Dim Sum',
-    'Indian',
-    'Italian',
-    'Mediterranean',
-    'Mexican',
+    'Hamburguer',
+    'Japa',
+    'Cafe',
+    'Italiana',
     'Pizza',
-    'Ramen',
-    'Sushi'
+    'Indiana',
+    'Mexicana',
+    'Grill'
   ],
   ratings: [
     {
       rating: 1,
-      text: 'Would never eat here again!'
+      text: 'Nunca comerei aqui de novo'
     },
     {
       rating: 2,
-      text: 'Not my cup of tea.'
+      text: 'Não vale a visita'
     },
     {
       rating: 3,
-      text: 'Exactly okay :/'
+      text: 'Simplesmente ok...'
     },
     {
       rating: 4,
-      text: 'Actually pretty good, would recommend!'
+      text: 'Muito bom, eu recomendaria!'
     },
     {
       rating: 5,
-      text: 'This is my favorite place. Literally.'
+      text: 'Esse é meu lugar favorito para comer!!'
     }
   ]
 };
-
-FriendlyEats.prototype.viewAddRestaurant = function() {
-  // Aqui você pode mostrar um formulário ou um modal para adicionar um restaurante
-  console.log("Adicionando um novo restaurante!");
-};
-
 window.onload = function() {
   window.app = new FriendlyEats();
 };

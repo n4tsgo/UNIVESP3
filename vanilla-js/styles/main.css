@@ -17,10 +17,10 @@
  */
  html,
  body {
-   font-family: 'Roboto', 'Helvetica', sans-serif;
+   font-family: 'Roboto', 'Arial', sans-serif;
    margin: 0px;
    padding: 0px;
-   background-color: #eee;
+   background-color: #eccb9f;
  }
  
  body > div > i {display: none !important;}
@@ -33,7 +33,7 @@
    clear: both;
  }
  
- #cards .info {color: #666;}
+ #cards .info {color: black;}
  
  aside .mdc-list-item {
    cursor: pointer;
@@ -59,7 +59,7 @@
  
  .back {float: left;}
  
- #site-header, #filter {background-color: #3367D6;}
+ #site-header, #filter {background-color: red;}
  
  #generic-header button {color: black;}
 
@@ -299,9 +299,9 @@
    border-bottom: 1px solid #ccc;
  }
  
- .mdc-textfield__label:after {background-color: #0288d1;}
+ .mdc-textfield__label:after {background-color: red;}
  
- .mdc-textfield--floating-label.is-focused .mdc-textfield__label {color: #0288d1;}
+ .mdc-textfield--floating-label.is-focused .mdc-textfield__label {color: red;}
  
  .mdc-button .material-icons {
    top: -1px;
@@ -496,7 +496,7 @@
    padding: 25px;
    position: relative;
    top: -20px;
-   background-color: #F4B400 !important;
+   background-color: orangered !important;
    color: white;
  }
  

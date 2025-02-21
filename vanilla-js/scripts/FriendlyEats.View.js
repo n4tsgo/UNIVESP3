@@ -30,7 +30,7 @@ FriendlyEats.prototype.viewHome = function() {
 
 FriendlyEats.prototype.viewList = function(filters, filter_description) {
   if (!filter_description) {
-    filter_description = 'any type of food with any price in any city.';
+    filter_description = 'qualquer tipo de restaurante localizado em qualquer cidade';
   }
 
   var mainEl = this.renderTemplate('main-adjusted');
@@ -109,7 +109,7 @@ FriendlyEats.prototype.viewList = function(filters, filter_description) {
     }
   };
 
-  if (filters.city || filters.category || filters.price || filters.sort !== 'Rating' ) {
+  if (filters.city || filters.category || filters.price || filters.sort !== 'Nota Maior para Menor' ) {
     this.getFilteredRestaurants({
       city: filters.city || 'Any',
       category: filters.category || 'Any',
@@ -178,7 +178,7 @@ FriendlyEats.prototype.initReviewDialog = function() {
     that.addRating(id, {
       rating: rating,
       text: dialog.querySelector('#text').value,
-      userName: 'Anonymous (Web)',
+      userName: 'Anônimo (Web)',
       timestamp: new Date(),
       userId: firebase.auth().currentUser.uid
     }).then(function() {
@@ -220,12 +220,12 @@ FriendlyEats.prototype.initFilterDialog = function() {
 
   this.replaceElement(
     dialog.querySelector('#category-list'),
-    this.renderTemplate('item-list', { items: ['Any'].concat(this.data.categories) })
+    this.renderTemplate('item-list', { items: ['Qualquer'].concat(this.data.categories) })
   );
 
   this.replaceElement(
     dialog.querySelector('#city-list'),
-    this.renderTemplate('item-list', { items: ['Any'].concat(this.data.cities) })
+    this.renderTemplate('item-list', { items: ['Qualquer'].concat(this.data.cities) })
   );
 
   var renderAllList = function() {
@@ -264,7 +264,7 @@ FriendlyEats.prototype.initFilterDialog = function() {
 
     sel.querySelectorAll('.mdc-list-item').forEach(function(el) {
       el.addEventListener('click', function() {
-        that.filters[type] = el.innerText.trim() === 'Any'? '' : el.innerText.trim();
+        that.filters[type] = el.innerText.trim() === 'Qualquer'? '' : el.innerText.trim();
         displaySection('page-all');
       });
     });
@@ -282,21 +282,21 @@ FriendlyEats.prototype.updateQuery = function(filters) {
   var query_description = '';
 
   if (filters.category !== '') {
-    query_description += filters.category + ' places';
+    query_description += filters.category + ' lugares';
   } else {
-    query_description += 'any restaurant';
+    query_description += 'qualquer restaurante';
   }
 
   if (filters.city !== '') {
-    query_description += ' in ' + filters.city;
+    query_description += ' em ' + filters.city;
   } else {
-    query_description += ' located anywhere';
+    query_description += ' localizado em qualquer lugar';
   }
 
   if (filters.price !== '') {
-    query_description += ' with a price of ' + filters.price;
+    query_description += ' com o preço de ' + filters.price;
   } else {
-    query_description += ' with any price';
+    query_description += ' com qualquer preço';
   }
 
   if (filters.sort === 'Rating') {
