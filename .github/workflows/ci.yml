@@ -22,7 +22,7 @@ jobs:
         node-version: '18'   # Define a versão do Node.js que está usando no projeto
 
     - name: Instalar dependências
-      run: npm install   # Ou "yarn install" se estiver usando Yarn
+      run: cd vanilla-js && npm install
 
     - name: Executar testes
       run: npm test      # Ou o comando de teste específico, dependendo do seu ambiente
