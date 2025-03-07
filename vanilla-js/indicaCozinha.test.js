@@ -14,7 +14,7 @@ describe('Teste de carregamento da página', () => {
   });
 
   test('A página deve carregar corretamente', async () => {
-    await page.goto('http://127.0.0.1:5000/'); // Altere para a URL correta
+    await page.goto('http://google.com/'); // Altere para a URL correta
     const title = await page.title();
     expect(title).not.toBeNull(); // Garante que a página carregou
   });
