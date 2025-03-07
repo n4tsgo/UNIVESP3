@@ -25,4 +25,4 @@ jobs:
       run: cd vanilla-js && npm install
 
     - name: Executar testes
-      run: npm test      # Ou o comando de teste específico, dependendo do seu ambiente
+      run: cd vanilla-js && npm test      # Ou o comando de teste específico, dependendo do seu ambiente
