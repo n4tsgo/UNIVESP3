@@ -109,7 +109,7 @@ FriendlyEats.prototype.viewList = function(filters, filter_description) {
     }
   };
 
-  if (filters.city || filters.category || filters.price || filters.sort !== 'Nota Maior para Menor' ) {
+  if (filters.city || filters.category || filters.price || filters.sort !== 'Maior Nota' ) {
     this.getFilteredRestaurants({
       city: filters.city || 'Any',
       category: filters.category || 'Any',

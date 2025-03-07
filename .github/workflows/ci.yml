@@ -25,4 +25,4 @@ jobs:
       run: npm install   # Ou "yarn install" se estiver usando Yarn
 
     - name: Executar testes
-      # run: npm test      # Ou o comando de teste específico, dependendo do seu ambiente
+      run: npm test      # Ou o comando de teste específico, dependendo do seu ambiente

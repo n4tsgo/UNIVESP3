@@ -1,28 +1,15 @@
-# FriendlyEats (Web)
+# IndicaCozinha (Web)
 
-## Introduction
+## Introdução
 
-FriendlyEats is a restaurant recommendation app built on Cloud Firestore.
-For more information about Firestore visit [the docs][firestore-docs].
-
-This project is the starting point for the [Cloud Firestore Web Codelab][codelab],
-which will show you how to build the applications step-by-step. If you'd like to
-simply run the finished result, see the [quickstart app][quickstart].
-
-<img src="nextjs-end/friendlyeats-finished.webp" />
+IndicaCozinha é um aplicativo web desenvolvido para o Projeto Integrador 3 da Univesp.
+Esse projeto permite que as pessoas avaliem restaurantes na região do interior de São Paulo.
 
 ## Setup
 
-Follow the [Cloud Firestore Web Codelab][codelab] to set up this sample.
-
-## License
-
-© Google, 2018. Licensed under an [Apache-2](./LICENSE) license.
-
-## Build Status
-
-[![Build Status](https://travis-ci.org/firebase/friendlyeats-web.svg?branch=master)](https://travis-ci.org/firebase/friendlyeats-web)
-
-[codelab]: https://codelabs.developers.google.com/codelabs/firestore-web
-[quickstart]: https://github.com/firebase/quickstart-js/tree/master/firestore
-[firestore-docs]: https://firebase.google.com/docs/firestore/
+O projeto possui as seguintes características:
+Software com framework web utilizando Javascript
+Banco de dados na nuvem por meio do Firebase
+Controle de versão por meio do Git
+Integração contínua e testes utilizando o Jest
+Uso de API para garantir que não haja revisões repetidas.

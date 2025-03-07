@@ -50,22 +50,24 @@ FriendlyEats.prototype.getRestaurant = function(id) {
 FriendlyEats.prototype.getFilteredRestaurants = function(filters, renderer) {
   var query = firebase.firestore().collection('restaurants');
 
-  if (filters.category !== 'Qualquer') {
+  console.log("Valor de filters.category:", filters.category);
+
+  if (filters.category !== 'Any') {
     query = query.where('category', '==', filters.category);
   }
 
-  if (filters.city !== 'Qualquer') {
+  if (filters.city !== 'Any') {
     query = query.where('city', '==', filters.city);
   }
 
-  if (filters.price !== 'Qualquer') {
+  if (filters.price !== 'Any') {
     query = query.where('price', '==', filters.price.length);
   }
 
-  if (filters.sort === 'Nota Menor para Maior') {
-    query = query.orderBy('avgRating', 'asc');
-} else if (filters.sort !== 'Nota Menor para Maior') {
+  if (filters.sort === 'Maior Nota') {
     query = query.orderBy('avgRating', 'desc');
+} else if (filters.sort === 'Mais Avaliações') {
+    query = query.orderBy('numRatings', 'desc');
 }
 
   this.getDocumentsInQuery(query, renderer);
