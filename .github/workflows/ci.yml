@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest    # O ambiente onde os testes serão executados (Ubuntu, mas pode ser Windows ou macOS)
+    runs-on: windows-latest    # O ambiente onde os testes serão executados (Ubuntu, mas pode ser Windows ou macOS)
 
     steps:
     - name: Checkout do repositório
