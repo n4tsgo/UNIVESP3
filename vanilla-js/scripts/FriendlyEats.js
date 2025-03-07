@@ -42,7 +42,7 @@ function FriendlyEats() {
   this.dialogs = {};
 
   var that = this;
-  // that.initAppCheck();
+  that.initAppCheck();
 
   firebase.auth().signInAnonymously().then(function() {
     that.initTemplates();
@@ -164,5 +164,3 @@ FriendlyEats.prototype.data = {
 window.onload = function() {
   window.app = new FriendlyEats();
 };
-
-module.exports = FriendlyEats;
