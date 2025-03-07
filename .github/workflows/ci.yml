@@ -1,0 +1,28 @@
+name: Integração Contínua
+
+on:
+  push:
+    branches:
+      - main      
+  pull_request:
+    branches:
+      - main     
+
+jobs:
+  test:
+    runs-on: ubuntu-latest    # O ambiente onde os testes serão executados (Ubuntu, mas pode ser Windows ou macOS)
+
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'   # Define a versão do Node.js que está usando no projeto
+
+    - name: Instalar dependências
+      run: npm install   # Ou "yarn install" se estiver usando Yarn
+
+    - name: Executar testes
+      # run: npm test      # Ou o comando de teste específico, dependendo do seu ambiente
