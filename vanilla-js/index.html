@@ -19,6 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IndicaCozinha</title>
 
+
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
   <link rel="icon" href="images/fire.ico">
@@ -54,17 +55,16 @@
 <body>
 <div>
   <div class="header"></div>
-
   <main></main>
 
   <div class="dialogs"></div>
-
-  <div hidden class="template" id="header-base">
+  <div class="template" id="header-base">
     <header id="site-header" class="mdc-toolbar mdc-toolbar--fixed">
         <div id="title" class="mdc-toolbar__row mdc-layout-grid">
             <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
               <img class="fire" src="/images/fire.ico" height="30px"/>
               <span class="mdc-toolbar__title">IndicaCozinha</span>
+              <button id="toggle-daltonic-mode" class="daltonic-button">Ativar Modo Daltônico</button>
             </section>
         </div>
         <div id="section-header" data-fir-if="hasSectionHeader"></div>
@@ -360,5 +360,19 @@
 <script src="/scripts/FriendlyEats.View.js"></script>
 <script src="/scripts/FriendlyEats.Mock.js"></script>
 <script src="/scripts/FriendlyEats.Data.js"></script>
+<script>
+  document.getElementById("toggle-daltonic-mode").addEventListener("click", function () {
+    console.log("Alterando cores para o modo daltônico...");
+    
+    document.body.classList.toggle("modo-daltonico");
+
+    // Confirma se a classe foi aplicada
+    if (document.body.classList.contains("modo-daltonico")) {
+        console.log("Modo daltônico ativado!");
+    } else {
+        console.log("Modo daltônico desativado!");
+    }
+});
+</script>
 </body>
 </html>

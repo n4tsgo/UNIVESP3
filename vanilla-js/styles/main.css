@@ -518,3 +518,40 @@
  aside textarea:focus {
    outline: none;
  }
+
+ .daltonic-button {
+  background-color: #ff9800; /* Laranja vibrante */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  right: 10px; /* Move para a direita */
+  top: 10px; /* Ajuste conforme necessário */
+}
+
+.daltonic-button:hover {
+  background-color: #e68900; /* Cor mais escura ao passar o mouse */
+}
+
+ .modo-daltonico {
+  background-color: #ffffcc !important; /* Amarelo claro para fundo */
+  color: #000 !important; /* Texto preto */
+}
+
+.modo-daltonico #site-header,
+.modo-daltonico #filter {
+  background-color: #004466 !important; /* Azul escuro para contraste */
+}
+
+.modo-daltonico .info,
+.modo-daltonico .details {
+  color: #333 !important; /* Cinza escuro para melhor contraste */
+}
+
+.modo-daltonico .material-icons {
+  color: #ff8000 !important; /* Laranja para ícones */
+}
