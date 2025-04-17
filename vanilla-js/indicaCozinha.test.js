@@ -8,7 +8,7 @@ beforeAll(async () => {
     args: ['--no-sandbox', '--disable-setuid-sandbox'], // <-- ESSA LINHA SOLUCIONA O ERRO
   });
   page = await browser.newPage();
-});
+}, 15000);
 
 afterAll(async () => {
   if (browser) {
