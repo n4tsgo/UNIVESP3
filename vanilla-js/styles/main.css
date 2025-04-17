@@ -59,7 +59,11 @@
  
  .back {float: left;}
  
- #site-header, #filter {background-color: red;}
+ #site-header {
+  background-color: transparent !important;
+}
+ 
+ #filter {background-color: red;}
  
  #generic-header button {color: black;}
 
@@ -114,7 +118,7 @@
  
  #filter {
    border-top-color: white;
-   padding-top: 0px;
+   padding-top: 6px;
    padding-bottom: 10px;
    max-width: 1024px;
    margin: 0px auto;
@@ -324,7 +328,7 @@
  }
  
  #site-header a {
-   color: white;
+   color: red;
    text-decoration: none;
  }
  

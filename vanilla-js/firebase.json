@@ -3,8 +3,8 @@
     "public": "./",
     "ignore": [
       "firebase.json",
-      "database-rules.json",
-      "storage.rules",
+      "**/.*",
+      "**/node_modules/**",
       "functions"
     ],
     "headers": [
@@ -13,7 +13,7 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=0"
+            "value": "no-cache"
           }
         ]
       }
@@ -28,5 +28,8 @@
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "functions"
   }
 }
